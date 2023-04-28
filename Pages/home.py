@@ -11,12 +11,12 @@ def layout():
             dbc.CardImg(src="assets/timevtime.jpg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("Time vs Time", className="card-title"),
+                    html.H4("Time vs Time", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Comparing Weather of a city at two different points of time",
-                        className="card-text",
+                        className="card-text", style={"text-align": "center"}
                     ),
-                    dbc.Button("Explore", color="info", href="/timevtime"),
+                    dbc.Button("Explore", color="info", href="/timevtime",style={"margin": "0 auto", "display": "block"}),
                 ]
             ),
         ],
@@ -29,12 +29,12 @@ def layout():
             dbc.CardImg(src="assets/cityvcity.jpeg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("City Comparison", className="card-title"),
+                    html.H4("City Comparison", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Comparing Weather of two different cities.",
-                        className="card-text",
+                        className="card-text", style={"text-align": "center"}
                     ),
-                    dbc.Button("Explore", color="info", href="/cityvcity"),
+                    dbc.Button("Explore", color="info", href="/cityvcity",style={"margin": "0 auto", "display": "block"}),
                 ]
             ),
         ],
@@ -47,12 +47,12 @@ def layout():
             dbc.CardImg(src="assets/future.jpeg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("Future Prediction", className="card-title"),
+                    html.H4("Future Prediction", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Get the weather of a city at a future date.",
-                        className="card-text",
+                        className="card-text", style={"text-align": "center"}
                     ),
-                    dbc.Button("Explore", color="info", href="/future"),
+                    dbc.Button("Explore", color="info", href="/future",style={"margin": "0 auto", "display": "block"}),
                 ]
             ),
         ],
@@ -65,12 +65,12 @@ def layout():
             dbc.CardImg(src="assets/currwea.jpeg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("Current Weather", className="card-title"),
+                    html.H4("Current Weather", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Get the current weather of the given city.",
-                        className="card-text",
+                        className="card-text", style={"text-align": "center"}
                     ),
-                    dbc.Button("Explore", color="info", href="/currwea"),
+                    dbc.Button("Explore", color="info", href="/currwea", style={"margin": "0 auto", "display": "block"}),
                 ]
             ),
         ],
@@ -83,12 +83,14 @@ def layout():
             dbc.CardImg(src="assets/historical.jpeg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("Historical Data", className="card-title"),
+                    html.H4("Historical Data", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Get the historical weather data of a given city.",
-                        className="card-text",
+                        className="card-text", style={"text-align": "center"}
                     ),
-                    dbc.Button("Explore", color="info", href="/history"),
+                    dbc.Button("Explore", color="info", href="/history",style={"margin": "0 auto", "display": "block"}),
+                    
+
                 ]
             ),
         ],
@@ -111,7 +113,7 @@ def layout():
 
 
     final_layout = html.Div([
-        html.H1(children='My First App with Data', className="display-3"),
+        html.H1(children='Home Page', className="display-5", style={"text-align": "center"}),
         html.Hr(),
         # html.P(children='A simple sidebar layout with navigation links', className="lead"),
         cards,
