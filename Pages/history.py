@@ -19,12 +19,12 @@ def get_unique_city():
     return list(df['name'].unique())
 
 def get_columns():
-    return [{"name": i, "id": i} for i in df.columns]
+    return [{"label": i, "value": i} for i in df.columns]
 
 @callback(
-    Output('graph1', 'figure'),
-    [Input('dropdown1', 'value'),
-    Input('dropdown2', 'value')])
+    Output('history_graph1', 'figure'),
+    [Input('history_dropdown1', 'value'),
+    Input('history_dropdown2', 'value')])
 def update_graph1(city1,columns):
 
     city_name1 = city1
@@ -43,7 +43,7 @@ def layout():
 
     dropdown1 = html.Div([
         dcc.Dropdown(
-            id='dropdown1',
+            id='history_dropdown1',
             value='Mumbai',
             options=[
                 {'label': i, 'value': i} for i in get_unique_city()
@@ -53,8 +53,8 @@ def layout():
 
     dropdown2 = html.Div([
         dcc.Dropdown(
-            id='dropdown2',
-            value='',
+            id='history_dropdown2',
+            value='temp',
             options=[
                 i for i in get_columns()
             ]
@@ -62,13 +62,13 @@ def layout():
     ])
 
     graph1 = html.Div([
-        dcc.Graph(id='graph1')
+        dcc.Graph(id='history_graph1')
     ])
 
 
 
     return html.Div([
-        html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
+        # html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
 
         dropdown1,
         dropdown2,
