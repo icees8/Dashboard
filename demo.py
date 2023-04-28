@@ -18,9 +18,9 @@ SIDEBAR_STYLE = {
 
 # the styles for the main content position it to the right of the sidebar and
 CONTENT_STYLE = {
-    "margin-left": "18rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
+    "margin-left"   : "18rem",
+    "margin-right"  : "2rem",
+    "padding"       : "2rem 1rem",
 }
 
 sidebar = html.Div(
@@ -28,13 +28,16 @@ sidebar = html.Div(
         html.H2("Weather Dashboard", className="display-6"),
         html.Hr(),
         html.P(
-            "A simple sidebar layout with navigation links", className="lead"
+            "", className="lead"
         ),
         dbc.Nav(
             [
-                dbc.NavLink("Home", href="/", active="exact"),
-                dbc.NavLink("Page 1", href="/page1", active="exact"),
-                dbc.NavLink("Page 2", href="/page2", active="exact"),
+                dbc.NavLink("Home Page"         , href="/"          , active="exact"),
+                dbc.NavLink("Current Weather"   , href="/currwea"   , active="exact"),
+                dbc.NavLink("Future Prediction" , href="/future"    , active="exact"),
+                dbc.NavLink("Historical Data"   , href="/history"   , active="exact"),
+                dbc.NavLink("Time vs Time"      , href="/timevtime" , active="exact"),
+                dbc.NavLink("City Comparison"   , href="/cityvcity" , active="exact"),
             ],
             vertical=True,
             pills=True,
