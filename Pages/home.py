@@ -8,7 +8,7 @@ dash.register_page(__name__, path='/')
 def layout():
     top_card = dbc.Card(
         [
-            dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+            dbc.CardImg(src="meko nhi pta", top=True),
             dbc.CardBody(
                 html.P("This card has an image at the top", className="card-text")
             ),
@@ -19,7 +19,7 @@ def layout():
     bottom_card = dbc.Card(
         [
             dbc.CardBody(html.P("This has a bottom image", className="card-text")),
-            dbc.CardImg(src="/static/images/placeholder286x180.png", bottom=True),
+            dbc.CardImg(src="mese mat pucho", bottom=True),
         ],
         style={"width": "18rem"},
     )
