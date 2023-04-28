@@ -1,4 +1,4 @@
-from dash import Dash, html, dash_table, dcc
+from dash import Dash, html, dash_table, dcc , callback, Input, Output
 import dash_bootstrap_components as dbc
 import dash
 import plotly.graph_objs as go
@@ -17,23 +17,27 @@ def get_city_date_data(city,date):
 
 def get_unique_city():
     return list(df['name'].unique())
-    # return ['hua','hui','we']
 
-def update_graph1(city1):
-    # filter the dataframe to only include the temperature data for the desired city
-    city_name = 'Mumbai'
-    city_data = df[df['name'] == city_name]
+def get_columns():
+    return [{"name": i, "id": i} for i in df.columns]
 
-    # create a trace for the temperature data
-    trace = go.Scatter(x=city_data['datetime'], y=city_data['temp'], name='Temperature')
-    # create the layout for the graph
-    layout = go.Layout(title='Temperature Time Series for ' + city_name, xaxis=dict(title='Date', tickmode='linear', dtick=7), yaxis=dict(title='Temperature (C)'))
+@callback(
+    Output('graph1', 'figure'),
+    [Input('dropdown1', 'value'),
+    Input('dropdown2', 'value')])
+def update_graph1(city1,columns):
 
-    # create the figure and add the trace and layout
-    fig = go.Figure(data=[trace], layout=layout)
+    city_name1 = city1
 
-    # display the graph
+    city_data1 = df[df['name'] == city_name1]
+
+    trace1 = go.Scatter(x=city_data1['datetime'], y=city_data1[columns], name=city_name1)
+
+    layout = go.Layout(title = f'{columns} Time Series comparison for ' + city_name1, xaxis=dict(title='Date', tickmode='linear', dtick=7), yaxis=dict(title='Temperature (C)'))
+
+    fig = go.Figure(data=[trace1], layout=layout)
     return fig
+
 
 def layout():
 
@@ -47,6 +51,16 @@ def layout():
         )
     ])
 
+    dropdown2 = html.Div([
+        dcc.Dropdown(
+            id='dropdown2',
+            value='',
+            options=[
+                i for i in get_columns()
+            ]
+        )
+    ])
+
     graph1 = html.Div([
         dcc.Graph(id='graph1')
     ])
@@ -55,7 +69,10 @@ def layout():
 
     return html.Div([
         html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
+
         dropdown1,
+        dropdown2,
+
         html.Hr(),
         graph1,
     ])
