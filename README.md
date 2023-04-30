@@ -13,6 +13,7 @@
 > follow the link to go to the dashboard
 
 NOTE: we are usingg a csv based data due to limited number of calls that can be made via an API
+
 ---
 
 Click on any tile's explore button to select your cities and/or dates to play and analyze the data
