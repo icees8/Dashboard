@@ -118,6 +118,8 @@ def layout():
     return html.Div([
         # html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
         heading_title,
+        html.Div(children='Select City and Feature', style={'textAlign': 'center'}),
+
         dropdown1,
         dropdown2,
 

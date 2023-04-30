@@ -29,7 +29,7 @@ def layout():
             dbc.CardImg(src="assets/cityvcity.jpeg", top=True, style={"height": "10rem"}),
             dbc.CardBody(
                 [
-                    html.H4("City Comparison", className="card-title", style={"text-align": "center"}),
+                    html.H4("City vs City", className="card-title", style={"text-align": "center"}),
                     html.P(
                         "Comparing Weather of two different cities.",
                         className="card-text", style={"text-align": "center"}

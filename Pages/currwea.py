@@ -54,7 +54,7 @@ def get_layout():
     uv_meter = html.Div(id = 'uv_meter', children = [
             html.H1('UV Meter', style={'textAlign': 'center'}),
             daq.Gauge(
-                    id='uv-chupa',
+                    id='uv-id',
                     showCurrentValue=True,
                     value = 0,
                     max=11,
@@ -98,7 +98,7 @@ def update_output(n_clicks, city):
         uv_meter_ = html.Div(children=[
         html.H1('UV Meter', style={'textAlign': 'center'}),
         daq.Gauge(
-                id='uv-chupa',
+                id='uv-id',
                 showCurrentValue=True,
                 value = val,
                 max=11,
