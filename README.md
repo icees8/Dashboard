@@ -12,7 +12,7 @@
 
 > follow the link to go to the dashboard
 
-NOTE: we are usingg a csv based data due to limited number of calls that can be made via an API
+NOTE: we are using a csv based data due to limited number of calls that can be made via an API. The csv can be found in assets in the name of weather_data.csv
 
 ---
 
