@@ -121,10 +121,13 @@ def layout():
     ])
 
 
-
+    heading_title = html.Div([
+        html.H2(children='Future Predictions', style={"text-align": "center"}),
+        html.Hr(),])
+    
     return html.Div([
         # html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
-
+        heading_title,
         dropdown1,
         dropdown2,
 

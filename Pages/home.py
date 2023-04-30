@@ -113,7 +113,7 @@ def layout():
 
 
     final_layout = html.Div([
-        html.H1(children='Home Page', className="display-5", style={"text-align": "center"}),
+        html.H2(children='Home Page', style={"text-align": "center"}),
         html.Hr(),
         # html.P(children='A simple sidebar layout with navigation links', className="lead"),
         cards,

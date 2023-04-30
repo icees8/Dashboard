@@ -111,11 +111,13 @@ def layout():
         dcc.Graph(id='range_graph')
     ])
 
-
+    heading_title = html.Div([
+        html.H2(children='Historical Data', style={"text-align": "center"}),
+        html.Hr(),])
 
     return html.Div([
         # html.Div(children='NEWWWWWWWWWWWWWWWWW YOOOOOOOOOOOrk'),
-
+        heading_title,
         dropdown1,
         dropdown2,
 

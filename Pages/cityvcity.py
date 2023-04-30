@@ -315,8 +315,12 @@ def layout():
     ])
         
 
-
+    heading_title = html.Div([
+        html.H2(children='Time vs Time', style={"text-align": "center"}),
+        html.Hr(),])
+    
     return html.Div([
+        heading_title,
         html.Div(children='Select Cities to Compare', style={'textAlign': 'center'}),
 
         dropdown1,
