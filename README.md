@@ -2,10 +2,14 @@
 
 ## Steps to run
 
-> download the zip older and extract all its ocntent
+> download the zip older and extract all its content
+
 > open the folder in an integrated terminal 
+
 > pip install dash and dash_daq apart 
+
 > run the file named demo.py
+
 > follow the link to go to the dashboard
 
 ---
