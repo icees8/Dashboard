@@ -38,6 +38,48 @@ def update_graph1(city1,columns):
     fig = go.Figure(data=[trace1], layout=layout)
     return fig
 
+@callback(Output('range_graph', 'figure'),
+            [Input('history_dropdown1', 'value'),
+            ])
+def update_graph2(city1):
+
+    city_name = city1
+    city_data = df[df['name'] == city_name]
+
+    line_data = city_data.iloc[::5, :]
+
+    # data
+    x = line_data['datetime']
+    y_min = line_data['tempmin'] # minimum values
+    y_max = line_data['tempmax'] # maximum values
+
+    # create bar chart with base=min and marker.line.width=max
+    fig = go.Figure(go.Bar(
+                x=x,
+                y=y_min,
+                base=y_min, # set base to min values
+                name = 'Max-Min temperature Range'
+                )
+            )
+
+    fig.add_trace(go.Scatter(
+        x = x,
+        y = line_data['temp'],
+        mode = 'lines+markers',
+        name = 'Actual temperature'
+    ))
+
+    # update layout
+    fig.update_layout(
+        title='Temp Variations',
+        xaxis_title='Date',
+        yaxis_title='Temperature (C)',
+    )
+
+    # show plot
+    return fig
+
+
 
 def layout():
 
@@ -65,6 +107,10 @@ def layout():
         dcc.Graph(id='history_graph1')
     ])
 
+    graph2 = html.Div([
+        dcc.Graph(id='range_graph')
+    ])
+
 
 
     return html.Div([
@@ -75,6 +121,7 @@ def layout():
 
         html.Hr(),
         graph1,
+        graph2
     ])
 
 # layout = get_layout()
