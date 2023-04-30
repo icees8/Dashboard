@@ -37,7 +37,7 @@ sidebar = html.Div(
                 dbc.NavLink("Future Prediction" , href="/future"    , active="exact"),
                 dbc.NavLink("Historical Data"   , href="/history"   , active="exact"),
                 dbc.NavLink("Time vs Time"      , href="/timevtime" , active="exact"),
-                dbc.NavLink("City Comparison"   , href="/cityvcity" , active="exact"),
+                dbc.NavLink("City vs City"   , href="/cityvcity" , active="exact"),
             ],
             vertical=True,
             pills=True,
