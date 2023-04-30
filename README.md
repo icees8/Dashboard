@@ -6,7 +6,7 @@
 
 > open the folder in an integrated terminal 
 
-> pip install dash and dash_daq apart 
+> pip install dash and dash_daq  
 
 > run the file named demo.py
 
