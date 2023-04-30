@@ -12,9 +12,10 @@
 
 > follow the link to go to the dashboard
 
+NOTE: we are usingg a csv based data due to limited number of calls that can be made via an API
 ---
 
-Click on any tile's explore button to select your cities and/or dates to play and analyze
+Click on any tile's explore button to select your cities and/or dates to play and analyze the data
 
 Home page
 ![image](https://user-images.githubusercontent.com/100991200/235340487-5b4daf38-6202-4ae8-8cfb-3522265595fb.png)
