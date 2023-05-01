@@ -50,4 +50,4 @@ content    = html.Div([dash.page_container],id="page-content", style=CONTENT_STY
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=False)
