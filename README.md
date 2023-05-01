@@ -13,7 +13,10 @@
 > follow the link to go to the dashboard
 
 NOTE: we are using a csv based data due to limited number of calls that can be made via an API. The csv can be found in assets in the name of weather_data.csv
+## About the Data
 
+> It has 5 cities --> Mumbai, Jodhpur, London, Prayagraj, Delhi
+> Has data from 1-11-2022 to 10-5-2023
 ---
 
 Click on any tile's explore button to select your cities and/or dates to play and analyze the data
