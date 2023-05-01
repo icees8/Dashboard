@@ -31,8 +31,8 @@ def get_layout():
     search_bar = dbc.Col([
         dbc.Row(
             [
-                dbc.Input(id="city", placeholder="City", type="text", style={"width": "60%"}, className="mr-2 mb-3"),
-                dbc.Button("Search", id="search_button", className="mr-2 mb-3", color="primary", style={"width": "20%"}, n_clicks=0),
+                dbc.Input(id="city", placeholder="City", type="text", style={"width": "60%"}, className="mr-2 mb-3", value='Jodhpur'),
+                dbc.Button("Search", id="search_button", className="mr-2 mb-3", color="primary", style={"width": "20%"}, n_clicks=1),
             ],
             justify="center"
         ),
