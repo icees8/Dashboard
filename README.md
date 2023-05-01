@@ -27,6 +27,11 @@ Home page
 
 ---
 
+Current page
+![image](https://user-images.githubusercontent.com/100991200/235439492-8bc02d45-3dbf-4016-ace4-a01c28589110.png)
+
+---
+
 Future Prediction
 ![image](https://user-images.githubusercontent.com/100991200/235338764-493a492c-d69e-4239-a73e-f1a7a2a024a6.png)
 
