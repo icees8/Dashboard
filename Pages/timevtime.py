@@ -171,7 +171,7 @@ def update_bargraph4(city, date1, date2):
     date2_trace = go.Bar(x=[date2], y=[date2_data['feelslike'].iloc[0]], name=date2)
 
     # Create the layout for the graph
-    layout = go.Layout(width=600, height=500, title='Comparison of Temp of ' + str(city) + ' on dates ' + str(date1) + str(date2), xaxis=dict(title='Date'), yaxis=dict(title='Temperature (C)'))
+    layout = go.Layout(width=600, height=500, title='Comparison of Feelslike of ' + str(city) + ' on dates ' + str(date1) + str(date2), xaxis=dict(title='Date'), yaxis=dict(title='Temperature (C)'))
 
     # Create the figure and add the traces and layout
     fig = go.Figure(data=[date1_trace, date2_trace], layout=layout)
