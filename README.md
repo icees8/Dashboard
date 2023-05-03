@@ -1,4 +1,5 @@
 # Website
+# NOT a dashboard but a visualization tool.
 
 ## Steps to run
 
