@@ -1,4 +1,4 @@
-# Dashboard
+# Website
 
 ## Steps to run
 
